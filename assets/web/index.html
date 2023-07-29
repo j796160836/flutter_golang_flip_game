@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card matching game</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=0.6"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div>計時器: {{ formatTime(timer) }}</div>
+  <div class="cont">
+    <div v-for="card in cardData" @click="flipCard(card.id)" class="c"
+         :class="{'flip': card.flipped || card.bingo}" data-value="0" id="card0">
+        <div class="front"></div>
+        <div class="back" v-html="card.content"></div>
+    </div>
+    </div>
+</div>
+<!-- partial -->
+<script src='./vue_2.7.8_vue.min.js'></script>
+<script src="./script.js"></script>
+
+</body>
+</html>

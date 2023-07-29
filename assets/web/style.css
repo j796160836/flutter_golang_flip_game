@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.25s;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font: bold 16px lato, monospace;
+}
+body .cont {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  perspective: 500px;
+}
+body .c {
+  border-radius: 13px;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+  transition: all ease-in-out 0.25s;
+  transform-style: preserve-3d;
+  outline: none;
+}
+body .c .front {
+  background: #ccc;
+  border-radius: 13px;
+  background-image: url(go.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+body .c .front, body .c .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #03446A;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+body .c .back {
+  border-radius: 13px;
+  color: #fff;
+  transform: rotateY(180deg);
+  background-color: #00aed8;
+}
+body .c .back div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .end {
+  position: absolute;
+  text-align: center;
+}
+body .end h3, body .end h5 {
+  font-size: 2.5pc;
+  color: #FFF;
+}
+
+.flip {
+  background: transparent;
+  transform: rotateY(180deg);
+}
