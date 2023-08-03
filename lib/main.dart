@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_golang_flip_game/webiew_page.dart';
+import 'package:flutter_golang_flip_game/flip_card_game_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WebViewPage(),
+      home: const FlipCardGameScreen(),
     );
   }
 }
