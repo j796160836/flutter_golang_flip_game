@@ -49,3 +49,5 @@ release_keystore.jks
 key.properties
 pubspec.lock
 Podfile.lock
+
+android2/

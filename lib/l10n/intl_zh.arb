@@ -1,0 +1,18 @@
+{
+  "@@locale": "zh",
+  "app_title": "Golang 小遊戲",
+  "gameTitle": "Golang 小遊戲",
+  "gameOver": "遊戲結束",
+  "timeUp": "時間到了！",
+  "playAgain": "再玩一次",
+  "congratulations": "恭喜！",
+  "foundAllPairs": "你成功找到所有的配對！",
+  "timer": "計時器：{duration}",
+  "@timer": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_golang_flip_game/contants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FlipCardGameScreen extends StatefulWidget {
   const FlipCardGameScreen({super.key});
@@ -102,15 +103,15 @@ class _FlipCardGameScreenState extends State<FlipCardGameScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('遊戲結束'),
-          content: const Text('時間到了！'),
+          title: Text(AppLocalizations.of(context)!.gameOver),
+          content: Text(AppLocalizations.of(context)!.timeUp),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
                 resetGame();
               },
-              child: const Text('再玩一次'),
+              child: Text(AppLocalizations.of(context)!.playAgain),
             ),
           ],
         );
@@ -123,15 +124,15 @@ class _FlipCardGameScreenState extends State<FlipCardGameScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('恭喜！'),
-          content: const Text('你成功找到所有的配對！'),
+          title: Text(AppLocalizations.of(context)!.congratulations),
+          content: Text(AppLocalizations.of(context)!.foundAllPairs),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
                 resetGame();
               },
-              child: const Text('再玩一次'),
+              child: Text(AppLocalizations.of(context)!.playAgain),
             ),
           ],
         );
@@ -220,7 +221,7 @@ class _FlipCardGameScreenState extends State<FlipCardGameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Golang mini Game'),
+        title: Text(AppLocalizations.of(context)!.app_title),
         actions: [
           IconButton(
               onPressed: () {
@@ -235,9 +236,10 @@ class _FlipCardGameScreenState extends State<FlipCardGameScreen> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(32, 20, 32, 20),
-              child: Text('計時器：${_printDuration(_gameDuration)}',
-                  style:
-                      const TextStyle(fontSize: 22, fontWeight: FontWeight.w600)),
+              child: Text(
+                AppLocalizations.of(context)!.timer(_printDuration(_gameDuration)),
+                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600)
+              ),
             ),
             Expanded(
               child: Padding(

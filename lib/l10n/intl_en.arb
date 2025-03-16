@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "app_title": "Golang mini Game",
+  "gameTitle": "Golang mini Game",
+  "gameOver": "Game Over",
+  "timeUp": "Time's up!",
+  "playAgain": "Play Again",
+  "congratulations": "Congratulations!",
+  "foundAllPairs": "You've found all the pairs!",
+  "timer": "Timer: {duration}",
+  "@timer": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  }
+}
